@@ -12,12 +12,12 @@ public class Enemy : MonoBehaviour
     public Material invisibleMaterial;
     public Material visibleMaterial;
 
-    private Renderer renderer;
+    private Renderer render;
     private Vector3 spawnPoint;
 
     private void Start()
     {
-        renderer = GetComponent<Renderer>();
+        render = GetComponent<Renderer>();
         spawnPoint = transform.position;
     }
 
@@ -29,11 +29,11 @@ public class Enemy : MonoBehaviour
         if (direction.magnitude > stoppingDistance)
         {
             transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-            renderer.material = visibleMaterial;
+            render.material = visibleMaterial;
         }
         else
         {
-            renderer.material = invisibleMaterial;
+            render.material = invisibleMaterial;
         }
 
         if (angle < lookAtRange)
