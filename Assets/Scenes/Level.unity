@@ -2075,6 +2075,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Walking Enemy A
       objectReference: {fileID: 0}
+    - target: {fileID: 1393226517549834703, guid: 96d60b79b0403b941992ade12a50fc4e, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 6026268557967457070, guid: 96d60b79b0403b941992ade12a50fc4e, type: 3}
       propertyPath: distance
       value: 10

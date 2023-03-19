@@ -149,7 +149,20 @@ public class Character : MonoBehaviour
     {
         if (other.gameObject.tag == "J_Powerup")
         {
+            jumpSpeed += 5.0f;
+            Destroy(other.gameObject);
+        }
 
+        if (other.gameObject.tag == "M_Powerup")
+        {
+            speed += 5.0f;
+            Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.tag == "W_Powerup")
+        {
+            projectileForce += 5.0f;
+            Destroy(other.gameObject);
         }
     }
 }

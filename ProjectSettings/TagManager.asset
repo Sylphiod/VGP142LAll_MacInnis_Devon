@@ -6,6 +6,11 @@ TagManager:
   tags:
   - ground
   - Attach
+  - Enemy
+  - Coin
+  - W_Powerup
+  - J_Powerup
+  - M_Powerup
   layers:
   - Default
   - TransparentFX
