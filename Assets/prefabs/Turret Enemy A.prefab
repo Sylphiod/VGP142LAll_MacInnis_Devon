@@ -2070,7 +2070,7 @@ MonoBehaviour:
       m_Calls: []
   target: {fileID: 918698086946887121, guid: cf323aebc390afc46a3b0d21b0c93e7c, type: 3}
   playerTransform: {fileID: 0}
-  distance: 10
+  distance: 25
   collectiblePrefabArray:
   - {fileID: 1525206158471060420, guid: 8a4e02b89fb361447bc8f55880d28638, type: 3}
   - {fileID: 1292094961306428031, guid: 26bfdd1315bdf0147b0ca6738183cf4c, type: 3}
