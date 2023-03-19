@@ -164,5 +164,13 @@ public class Character : MonoBehaviour
             projectileForce += 5.0f;
             Destroy(other.gameObject);
         }
+
+        if (other.gameObject.tag == "A_Powerup")
+        {
+            projectileForce += 2.0f;
+            speed += 2.0f;
+            jumpSpeed += 5.0f;
+            Destroy(other.gameObject);
+        }
     }
 }

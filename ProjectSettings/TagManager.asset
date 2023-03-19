@@ -11,6 +11,8 @@ TagManager:
   - W_Powerup
   - J_Powerup
   - M_Powerup
+  - A_Powerup
+  - PatrolNode
   layers:
   - Default
   - TransparentFX
