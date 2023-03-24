@@ -14,6 +14,9 @@ public class CanvasManager : MonoBehaviour
     public Button quitButton;
     public Button returnToMenuButton;
     public Button returnToGameButton;
+    public Button saveGameButton;
+    public Button newGameButton;
+    public Button loadGameButton;
 
     [Header("Menus")]
     public GameObject mainMenu;
@@ -60,6 +63,15 @@ public class CanvasManager : MonoBehaviour
         if (backButton)
             backButton.onClick.AddListener(() => ShowMainMenu());
 
+        if (newGameButton)
+            newGameButton.onClick.AddListener(() => FreshGame());
+
+        if (loadGameButton)
+            loadGameButton.onClick.AddListener(() => UpdateGame());
+
+        if (saveGameButton)
+            saveGameButton.onClick.AddListener(() => SavingGame());
+
         if (volSlider)
         {
             volSlider.onValueChanged.AddListener((value) => OnSliderValueChanged(value));
@@ -100,6 +112,20 @@ public class CanvasManager : MonoBehaviour
                 }
             }
         }
+    }
+    public void FreshGame()
+    {
+        DataPersistenceManager.instance.NewGame();
+    }
+
+    public void UpdateGame()
+    {
+        DataPersistenceManager.instance.LoadGame();
+    }
+
+    public void SavingGame()
+    {
+        DataPersistenceManager.instance.SaveGame();
     }
 
     public void ReturnToGame()

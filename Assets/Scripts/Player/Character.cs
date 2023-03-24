@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
 [RequireComponent(typeof(CharacterController), typeof(Animator))]
-public class Character : MonoBehaviour
+public class Character : MonoBehaviour, IDatatPersistence
 {
     CharacterController controller;
     Animator anim;
@@ -56,6 +56,17 @@ public class Character : MonoBehaviour
         }
     }
 
+
+    public void LoadData (GameData data)
+    {
+        this.transform.position = data.playerPosition;
+    }
+
+    public void SaveData (ref GameData data)
+    {
+        data.playerPosition = this.transform.position;
+    }
+    
     // Update is called once per frame
     void Update()
     {
